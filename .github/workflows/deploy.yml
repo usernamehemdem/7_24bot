@@ -1,0 +1,27 @@
+name: Run Telegram Bot
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Kodları klonla
+        uses: actions/checkout@v3
+
+      - name: Python kur
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Gerekli kütüphaneleri yükle
+        run: pip install -r requirements.txt
+
+      - name: Botu başlat
+        run: |
+          nohup python main.py &
+          sleep 10
