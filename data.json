@@ -1,0 +1,10 @@
+{
+  "channel": "@YOUR_CHANNEL",
+  "interval": 3600,
+  "days": 1,
+  "posts": [],
+  "last_message_id": null,
+  "is_posting": false,
+  "start_time": null,
+  "current_index": 0
+}
